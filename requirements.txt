@@ -1,35 +1,12 @@
-# Core web app framework for interactive UI
 streamlit>=1.30.0
-
-# Environment variable management
 python-dotenv
-
-# PDF parsing library
 pypdf
-
-# LangChain for chaining LLM calls
 langchain
-
-# LangChain Google Gemini API integration
 langchain-google-genai
-
-# Data validation and secrets management
 pydantic
-
-# Speech recognition for voice input
 speechrecognition
-
-# Audio input library (skip on Windows)
 pyaudio; platform_system != 'Windows'
-
-# Animation support for Streamlit (optional)
 streamlit-lottie>=0.0.3
-
-# Image processing library used for handling profile images etc.
 pillow>=10.0.0
-
-# HTTP requests library
 requests>=2.31.0
-
-# Optional: Streamlit option menu for improved sidebar navigation UI
 streamlit-option-menu
