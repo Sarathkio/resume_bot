@@ -1,12 +1,10 @@
-streamlit>=1.30.0
-python-dotenv
-pypdf
+streamlit
+pandas
+numpy
+requests
+openai
 langchain
-langchain-google-genai
-pydantic
-speechrecognition
-pyaudio; platform_system != 'Windows'
-streamlit-lottie>=0.0.3
-pillow>=10.0.0
-requests>=2.31.0
-streamlit-option-menu
+python-dotenv
+pymupdf
+pyttsx3
+SpeechRecognition
