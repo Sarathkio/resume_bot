@@ -5,6 +5,6 @@ requests
 openai
 langchain
 python-dotenv
-pymupdf
+pypdf
 pyttsx3
 SpeechRecognition
