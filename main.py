@@ -24,10 +24,12 @@ st.set_page_config(page_title="ResumeBot - AI Interview Coach", page_icon="🤖"
 # Load environment variables from a .env file
 load_dotenv()
 # Get the API key from environment variables
-api_key = os.getenv("GOOGLE_API_KEY")
+
+# Read API key from Streamlit secrets
+api_key = st.secrets["GOOGLE_API_KEY"]
 
 if not api_key:
-    raise ValueError("❌ GOOGLE_API_KEY environment variable is not set.")
+    raise ValueError("❌ GOOGLE_API_KEY is missing in secrets.")
 
 # Initialize the Google Gemini AI model with API key (kept secret)
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=SecretStr(api_key))
