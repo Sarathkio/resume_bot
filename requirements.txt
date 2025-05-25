@@ -7,3 +7,4 @@ python-dotenv
 pypdf
 pyttsx3
 SpeechRecognition
+streamlit-oauth
