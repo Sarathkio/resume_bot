@@ -13,8 +13,6 @@ import speech_recognition as sr                            # Speech-to-text for 
 # Import custom app pages (modules) from 'app' folder
 # main.py
 from app.login import login
-
-from app.dashboard import dashboard
 from app.profile import profile
 from app.uploads import uploads
 from app.settings import settings
