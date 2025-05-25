@@ -41,7 +41,7 @@ def get_google_api_key():
 
 
 # Initialize the Google Gemini AI model with API key (kept secret)
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=SecretStr(api_key))
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=api_key)
 
 # Define default session state values to persist across user sessions
 default_session = {
