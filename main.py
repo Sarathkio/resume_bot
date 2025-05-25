@@ -23,9 +23,9 @@ st.set_page_config(page_title="ResumeBot - AI Interview Coach", page_icon="🤖"
 
 # Load environment variables from a .env file
 load_dotenv()
-api_key = os.getenv(AIzaSyA9BFo6gX-1tYr8hT4m1NPOZOF3e6yPOrY)  # Retrieve Google API key
+# Get the API key from environment variables
+api_key = os.getenv("GOOGLE_API_KEY")
 
-# Check if API key exists, else throw error
 if not api_key:
     raise ValueError("❌ GOOGLE_API_KEY environment variable is not set.")
 
