@@ -26,10 +26,22 @@ load_dotenv()
 # Get the API key from environment variables
 
 # Read API key from Streamlit secrets
-api_key = st.secrets["GOOGLE_API_KEY"]
+def get_google_api_key():
+    # Try reading from Streamlit secrets (Cloud)
+    try:
+        return st.secrets["GOOGLE_API_KEY"]
+    except KeyError:
+        # Fallback to environment variable (local)
+        api_key = os.getenv("GOOGLE_API_KEY")
+        if api_key:
+            return api_key
+        else:
+            raise ValueError("❌ GOOGLE_API_KEY not found in Streamlit secrets or environment variables.")
 
-if not api_key:
-    raise ValueError("❌ GOOGLE_API_KEY is missing in secrets.")
+# Usage:
+api_key = get_google_api_key()
+
+st.write("✅ Google API key loaded successfully.")
 
 # Initialize the Google Gemini AI model with API key (kept secret)
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=SecretStr(api_key))
